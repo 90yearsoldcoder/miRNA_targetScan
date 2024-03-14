@@ -52,6 +52,7 @@ python ./scripts/getcircfasta.py -f path/to/GRChXX.primary_assembly.genome.fa -c
 ```
 python ./scripts/addBackSplicing.py -i ./result/CircRNAseq_no_backsplicing.fa -o ./result/CircRNAseq_with_backsplicing.fa
 ```
+* You can define the length of left arm and right arm by using `-L` and `-R` parameter. The default length is 15.
 
 ## 5. Target Scan
 ```
