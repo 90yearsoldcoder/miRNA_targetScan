@@ -19,6 +19,7 @@ parser.add_argument("-R", "--Right", help="the length of right arm", required=Fa
 args = parser.parse_args()
 
 
+bsp_length = args.Left + args.Right
 with open(args.input, 'r') as input_file, open(args.output, 'w') as output_file:
     cur_gene_line = ""
     for line in input_file:
@@ -27,7 +28,7 @@ with open(args.input, 'r') as input_file, open(args.output, 'w') as output_file:
             cur_gene_line = line
             continue
         cur_gene_line_sp = cur_gene_line.split('\t')
-        cur_gene_line_sp[3] += "(backsp)"
+        cur_gene_line_sp[3] += f"(backsp)${bsp_length}"
         cur_gene_line = "\t".join(cur_gene_line_sp)
         output_file.write(cur_gene_line)
         output_file.write(generate_gRNA(line.strip(), args.Left, args.Right) + "\n")
