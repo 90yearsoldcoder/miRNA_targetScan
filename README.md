@@ -5,9 +5,8 @@ This pipeline is for circRNA and include the back-splicing regions
 </br>
 
 # Dependency
-bedtools
-
-python3
+* bedtools/2.31.0
+* perl/v5.34.0, python3/-
 
 </br>
 
@@ -32,7 +31,7 @@ python3
         chr1	65578264	65578380	ENSG00000224570.1_exon_1	RP11-430H12.2	-
         chr1	65576128	65577809	ENSG00000224570.1_exon_2	RP11-430H12.2	-
         ```
-    - If you are a BU SCC user, an example can found at `/restricted/projectnb/casa/mtLin/sambabi/miRNA_targetScan/gencode.v26.primary_assembly.annotation_exons.bed`. Plz remeber to update it to coordinate with your reference version.
+    - If you are a BU SCC user, an example can be found at `/restricted/projectnb/casa/mtLin/sambabi/miRNA_targetScan/gencode.v26.primary_assembly.annotation_exons.bed`. Plz remeber to update it to coordinate with your reference version.
 * **miRNA library**
     * An out-of-date(?) version is provided at example/miR_Family_info_all.txt
     * Check the [targetScan website](https://www.targetscan.org/cgi-bin/targetscan/data_download.vert80.cgi) to follow the latest one.
