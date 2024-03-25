@@ -3,7 +3,7 @@
 
 inputbed=../example/example.bed
 ref_fasta=../../GRCh38.primary_assembly.genome.fa
-ref_exon=../../casa/mtLin/sambabi/miRNA_targetScan/TargetScanPipeline.sh
+ref_exon=/restricted/projectnb/casa/mtLin/sambabi/miRNA_targetScan/gencode.v26.primary_assembly.annotation_exons.bed
 miRNA_family_inf=../example/miR_Family_info_all.txt
 
 
