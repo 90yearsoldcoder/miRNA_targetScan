@@ -75,4 +75,9 @@ cd scripts
 qsub TargetScanPipeline.sh
 ```
 
+# Todo List
+```
+awk 'NR%2{printf "%s ",$0;next;}1' ./result/CircRNAseq_with_backsplicing.fa | awk '{print $4"::"$1":"$2"-"$3,"9606",$9}' | sed 's/>//g' |  awk 'BEGIN{OFS="\t";} {gsub("T","U",$3);print}' >  ./result/CircRNAseq_post.fa
+```
+does not work well when the number of col changed. Need fixing
 
