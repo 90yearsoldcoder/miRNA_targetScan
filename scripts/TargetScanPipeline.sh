@@ -2,7 +2,7 @@
 # bash TargetScanPipeline.sh CircRNAlist_pde4b 
 
 inputbed=../example/example.bed
-ref_fasta=../../GRCh38.primary_assembly.genome.fa
+ref_fasta=/restricted/projectnb/casa/mtLin/sambabi/miRNA_targetScan/GRCh38.primary_assembly.genome.fa
 ref_exon=/restricted/projectnb/casa/mtLin/sambabi/miRNA_targetScan/gencode.v26.primary_assembly.annotation_exons.bed
 miRNA_family_inf=../example/miR_Family_info_all.txt
 

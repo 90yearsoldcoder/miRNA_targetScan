@@ -72,7 +72,7 @@ awk 'NR%2{printf "%s ",$0;next;}1' ./result/CircRNAseq_with_backsplicing.fa | aw
 * Run the pipeline
 ```
 cd scripts
-qsub TargetScanPipeline.sh
+qsub -P <project_name> TargetScanPipeline.sh
 ```
 
 # Todo List
