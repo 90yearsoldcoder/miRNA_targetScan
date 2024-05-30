@@ -20,7 +20,7 @@ python getcircfasta.py -f ${ref_fasta} -c ${inputbed} -e ${ref_exon} -o ../resul
 python addBackSplicing.py -i ../result/CircRNAseq_no_backsplicing.fa -o ../result/CircRNAseq_with_backsplicing.fa
 
 #Processed 
-awk 'NR%2{printf "%s ",$0;next;}1' ../result/CircRNAseq_with_backsplicing.fa | awk '{print $4"::"$1":"$2"-"$3,"9606",$9}' | sed 's/>//g' |  awk 'BEGIN{OFS="\t";} {gsub("T","U",$3);print}' >  ../result/CircRNAseq_post.fa
+awk 'NR%2{printf "%s ",$0;next;}1' ../result/CircRNAseq_with_backsplicing.fa | awk '{print $4"::"$1":"$2"-"$3"("$6")","9606",$9}' | sed 's/>//g' |  awk 'BEGIN{OFS="\t";} {gsub("T","U",$3);print}' >  ../result/CircRNAseq_post.fa
 
 #Run Targetscan
 targetscan_70.pl ${miRNA_family_inf} ../result/CircRNAseq_post.fa ../result/CircRNA_targetScan_result.txt
