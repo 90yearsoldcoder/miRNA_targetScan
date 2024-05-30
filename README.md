@@ -64,6 +64,17 @@ awk 'NR%2{printf "%s ",$0;next;}1' ./result/CircRNAseq_with_backsplicing.fa | aw
 * in the `./result/CircRNAseq_post.fa`, we use 9606 as human Species id. If your sample is not human, plz revise it.
 * You can replace `path/to/miR_Family_info_all.txt` with `./example/miR_Family_info_all.txt` for test.
 
+## 6. Convert to **[viewer](https://github.com/90yearsoldcoder/motif_viewer)** input
+```
+python convertToVis.py
+```
+
+if you want to apply filter on the result
+```
+python filter.py
+```
+**This is a hard code script(further development needed)**
+
 </br>
 
 # (Better Option for BU SCC user) All-in-one BU SCC qsub task file
